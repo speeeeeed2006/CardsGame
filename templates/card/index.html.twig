@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CardController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Sorting Cards {{ controller_name }}! ✅</h1>
+
+    <h2>unsorted</h2>
+    {% for card in unsortedCards %}
+        <img src="{{ asset('images/cards/' ~ card.value.value ~ card.color.value ~ '.gif') }}" alt="{{ card.value.value }} - {{ card.color.value }}"/>
+    {% endfor %}
+     <h2>sorted</h2>
+    {% for card in sortedCards %}
+        <img src="{{ asset('images/cards/' ~ card.value.value ~ card.color.value ~ '.gif') }}" alt="{{ card.value.value }} - {{ card.color.value }}"/>
+    {% endfor %}
+</div>
+{% endblock %}
