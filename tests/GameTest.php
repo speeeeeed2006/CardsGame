@@ -27,7 +27,7 @@ final class GameTest extends KernelTestCase
 
         $this->assertCount(10, $cards);
         $this->assertIsArray($cards);
-
+        
         
     }
 }
